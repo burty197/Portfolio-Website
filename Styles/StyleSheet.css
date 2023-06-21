@@ -73,7 +73,34 @@
     display:none
     /* Checkbox display none */
 }
-
+/* Footer */
+footer{ 
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(112,30,112,1) 96%, rgba(87,23,95,1) 100%, rgba(0,212,255,1) 100%);
+    color: white;
+    display:flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content:center;
+    position: fixed;
+    margin-top: auto;
+    padding: 10px;
+    bottom: 0px; 
+    left: 0px; 
+    right: 0px;
+    font-family: 'Oswald', sans-serif;
+}
+footer p{
+    margin-left: 40px;
+}
+.fa-brands{
+    font-size: xx-large;
+    align-items: center;
+    color: white; 
+    margin-right:30px;
+    margin-left:0px;
+    margin-top:0px;
+    margin-bottom:0px;
+}
 /* Media */
 @media(max-width: 960px){
     .primary_header{
