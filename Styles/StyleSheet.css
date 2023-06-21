@@ -1,0 +1,108 @@
+/* Font Imports*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400;600;700;900&display=swap');
+/* Style Rules */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.primary_header{
+    position: sticky;
+    top:0;
+    width: 100%;
+    padding: 20px;
+    z-index: 99;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; 
+    text-align: center;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(112,30,112,1) 96%, rgba(87,23,95,1) 100%, rgba(0,212,255,1) 100%);
+    font-family: 'Oswald', sans-serif;
+}
+.menu{
+    display: flex;
+    list-style-type: none;
+}
+.menu li a{
+    color:white;
+    text-decoration: none;
+    margin-left:-3px;
+    margin-right: 50px;
+    font-size:22px;
+    font-weight: 400;
+    transition: 0.15s ease-in-out;
+    position: relative;
+}
+.logo{
+    color:white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 400;   
+}
+.menu li a::after{
+    content: "";
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:0;
+    height: 1px;
+    background-color: white;
+    transition: 0.15s ease-in-out;
+}
+.menu li a:hover:after{
+    width:120%
+}
+.open_menu , .close_menu{
+    position:absolute;
+    color: white;
+    cursor: pointer;
+    font-size:1.5rem;
+    display: none;
+}
+.open_menu{
+    top:50%;
+    right:20px;
+    transform: translateY(-50%)
+}
+.close_menu{
+    top:20px;
+    right:20px;
+}
+#check{
+    display:none
+    /* Checkbox display none */
+}
+
+/* Media */
+@media(max-width: 960px){
+    .primary_header{
+        display:flex;
+        justify-content: space-between;
+        padding-left: 25px;
+    }
+    .menu{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height:100vh;
+        position: fixed;
+        top:0;
+        right:100%;
+        z-index:100;
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(112,30,112,1) 96%, rgba(87,23,95,1) 100%, rgba(0,212,255,1) 100%);
+        transition: all 0.2s ease-in-out;
+    }
+    .open_menu , .close_menu{
+        display: block;
+    }
+    .menu li{ 
+        margin-top: 90px;
+    }  
+    .menu li a{ 
+        font-size: x-large;
+    }
+    #check:checked ~ .menu{right:0;}
+   
+}

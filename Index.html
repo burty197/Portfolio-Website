@@ -13,7 +13,7 @@
     <!--StyleSheet Links-->
     <link rel="stylesheet" href="/Styles/StyleSheet.css">
     <!--Scripts Links-->
-    <script src="Script/Script.js"></script>
+    <script src="/Scripts/Script.js"></script>
     <script
     src="https://kit.fontawesome.com/4deae4cd10.js"
     crossorigin="anonymous">
@@ -22,8 +22,27 @@
 </head>
 <body>
     <!--Main Header-->
-    <header>
+    <header class="primary_header">
+        <div id="logo"><a href="#" class="logo">Conner Burt</a></div>
         <!--Navbar-->
+        <nav>
+            <ul>
+                <input type="checkbox" id="check" />
+        <!-- check box for menu-->
+            <span class="menu">
+                <li><a href="#Home" class="active" onclick="closeMenu()">Home</a></li>
+                <!---added on click function to as well as to each list item--->
+                <li><a href="#About_me" onclick="closeMenu()">About</a></li>
+                <!--<li><a href="#Experience" onclick="closeMenu()">Experience</a></li>-->
+                <li><a href="#Projects" onclick="closeMenu()">Projects</a></li>
+                <li><a href="#Contact" onclick="closeMenu()">Contact</a></li>
+                <!--- mobile menu icon for close menu -->
+                <label for="check" class="close_menu"><i class="fas fa-times"></i></label>
+            </span>
+        <!--- mobile menu icon for open menu -->
+            <label for="check" class="open_menu"><i class="fas fa-bars"></i></label> 
+            </ul>    
+        </nav> 
     </header>
     <div class="Wrapper">
         <!--Page Wrapper-->
