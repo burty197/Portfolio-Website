@@ -81,10 +81,9 @@ body{
 /*Wrapper*/
 .Wrapper {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
+    display: grid;
+    place-items: center;
+    align-content: center;
     margin-left: 20%;
     margin-right: 20%;
 }
@@ -93,11 +92,11 @@ body{
 .Home_container{
     max-width: 1000px;
     min-height:100vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    color: white; 
     position: relative;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    color: white; 
     /*border-style: solid;
     border-color: green;*/
 }
@@ -114,12 +113,11 @@ body{
 /*About*/
 .About{
     position: relative;
+    display: grid;
+    place-items: center;
+    align-content: center;
     max-width: 100%;
     min-height:100vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
     color: white; 
     /* border-style: solid;
     border-color: red;*/
